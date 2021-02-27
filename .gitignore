@@ -21,3 +21,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.idea/
+/union-web/union-web.iml
+/union-web/target/
+/union-service/union-service.iml
+/union-service/target/
+/union-domain/union-domain.iml
+/union-domain/target/
+/union-common/union-common.iml
+/union-common/target/
+/union.iml

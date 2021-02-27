@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.broadtext</groupId>
+    <artifactId>union</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>union-web</module>
+        <module>union-service</module>
+        <module>union-domain</module>
+        <module>union-common</module>
+    </modules>
+
+    <properties>
+        <version.union>1.0.0-SNAPSHOT</version.union>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.spring-boot>2.2.9.RELEASE</version.spring-boot>
+        <version.swagger>2.9.2</version.swagger>
+        <version.mybatis-plugin>3.4.5</version.mybatis-plugin>
+        <version.mybatis-plus>3.3.2</version.mybatis-plus>
+        <version.druid>1.1.23</version.druid>
+        <version.commons-lang>3.7</version.commons-lang>
+        <version.mysql>8.0.16</version.mysql>
+        <version.guava>23.0</version.guava>
+        <version.fastjson>1.2.70</version.fastjson>
+        <version.poi>4.0.0</version.poi>
+        <version.lombok>1.18.10</version.lombok>
+        <version.solr>8.2.0</version.solr>
+        <version.jedis>3.1.0</version.jedis>
+        <version.dynamic-datasource>3.2.0</version.dynamic-datasource>
+        <version.log4j-plugin>1.0.0</version.log4j-plugin>
+        <version.aspectj>1.9.6</version.aspectj>
+        <version.hutool>5.4.4</version.hutool>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${version.spring-boot}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${version.spring-boot}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${version.spring-boot}</version>
+            </dependency>
+
+            <!-- api工具 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${version.swagger}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${version.swagger}</version>
+            </dependency>
+            <!-- api工具 -->
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${version.mybatis-plus}</version>
+            </dependency>
+
+            <!-- mybatis 相关 -->
+
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${version.mysql}</version>
+            </dependency>
+            <!-- mysql -->
+
+            <!-- druid连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${version.druid}</version>
+            </dependency>
+            <!-- druid连接池 -->
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${version.druid}</version>
+            </dependency>
+            
+            <!-- 工具包 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${version.lombok}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${version.fastjson}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${version.guava}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${version.commons-lang}</version>
+            </dependency>
+            <!-- 工具包 -->
+
+            <!--poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${version.poi}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${version.jedis}</version>
+            </dependency>
+
+            <!-- 读写分离插件 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${version.dynamic-datasource}</version>
+            </dependency>
+
+            <!-- 日志增强插件 -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${version.aspectj}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${version.hutool}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.broadtext</groupId>
+                <artifactId>union-web</artifactId>
+                <version>${version.union}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.broadtext</groupId>
+                <artifactId>union-service</artifactId>
+                <version>${version.union}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.broadtext</groupId>
+                <artifactId>union-domain</artifactId>
+                <version>${version.union}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.broadtext</groupId>
+                <artifactId>union-common</artifactId>
+                <version>${version.union}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
